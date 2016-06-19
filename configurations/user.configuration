@@ -1,0 +1,19 @@
+## **********REQUIRED FIELDS********** #
+##           gitEmailAddress 
+##           gitUserName 
+## **********    ********   ********** #
+
+## These values will be used to populate your GitHub 
+## configurations. Sample filled out would be-
+## gitEmailAddress: jackkeck@dummy.com
+[GitHub]
+gitEmailAddress: 
+gitUserName: 
+
+
+## If this is switched to licensed, the code will
+## check for the License.sublime_license file in
+## the configurations folder and then copy into
+## your installationg of SublimeText 3.
+[SublimeText]
+sublimeLicense: unlicensed 
