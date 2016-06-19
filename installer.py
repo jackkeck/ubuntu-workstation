@@ -1,7 +1,6 @@
 import ConfigParser
 import os
 
-
 ############################
 ############################
 ## USER DEFINED SETTINGS  ##
@@ -49,7 +48,6 @@ else:
 	print "Failed to configure git email"
 
 gitUSerReturn = os.system("git config --global user.name "+gitUserName)
-
 if gitUSerReturn == 0:
 	print "Configured git with user: "+gitUserName
 else:
@@ -64,9 +62,11 @@ else:
 print "..."
 print "..."
 print "INSTALLING SUBLIME TEXT 3"
+
 print os.system("sudo add-apt-repository ppa:webupd8team/sublime-text-3")
 print os.system("sudo apt-get update")
 print os.system("sudo apt-get install sublime-text-installer")
+
 if sublimeLicense == "licensed":
 	os.system("cp -u configurations/License.sublime_license ~/.config/sublime-text-3/Local")
 	print "Added license for sublime text"
