@@ -1,13 +1,27 @@
 import ConfigParser
 import os
 
+
+############################
+############################
+## USER DEFINED SETTINGS  ##
+############################
+############################
+
+print "..."
+print "..."
 print "GRABBING USER SETTINGS"
+print "..."
+
 config = ConfigParser.ConfigParser()
 config.read("configurations/user.configuration")
+
 gitEmailAddress = config.get('GitHub','gitEmailAddress')
 print "gitEmailAddress: "+gitEmailAddress
+
 gitUserName = config.get('GitHub','gitUserName')
 print "gitUserName: "+gitUserName
+
 sublimeLicense = config.get('SublimeText','sublimeLicense')
 if sublimeLicense == "licensed": 
 	print "Sublime license found and will install registered version"
@@ -19,10 +33,12 @@ else:
 ## GIT INSTALL AND CONFIG ##
 ############################
 ############################
+
 print "..."
 print "..."
 print "INSTALLING GIT"
 print "..."
+
 print os.system("sudo apt-get update")
 print os.system("sudo apt-get install git")
 
@@ -38,7 +54,6 @@ if gitUSerReturn == 0:
 	print "Configured git with user: "+gitUserName
 else:
 	print "Failed to configure git user"
-
 
 ############################
 ############################
